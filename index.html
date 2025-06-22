@@ -9,15 +9,16 @@
        .svg{
         background-color: black;
         border-radius: 40px;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
        }
        #h1{
         fill: white;
-        font-size: 80px;
-
+        font-size: 6vw;
         transform: translateX(-100%);
         opacity: 0;
         animation: slideIn 1s ease-out forwards;
-
         transform-box: fill-box;
         transform-origin: 0 0;
        }
@@ -29,83 +30,57 @@
        }
        #para{
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 100;
         word-spacing: 2px;
-        border-left: 30px;
+        margin: 0 20px;
        }
        #line1{
-        margin-left: 40px;
-        text-align: left;
-        font-size: 40px;
+        text-align: center;
+        font-size: 32px;
         font-family: 'Times New Roman', Times, serif;
        }
        #line2{
         text-align: center;
-        font-size: 30px;
+        font-size: 24px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
        }
-       #para{
-        margin-left: 40px;
-       }
-       #html{
-        width: 250px;
-        height: 250px;
-        margin-left: 200px;
+       #html, #css, #c, #java {
+        width: 40vw;
+        max-width: 200px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
         transition: transform 0.3s;
        }
-       #html:hover{
-        transform: scale(1.1);
-       }
-       #css{
-        width: 200px;
-        height: 250px;
-        margin-left: 480px;
-        transition: transform 0.3s;
-       }
-       #css:hover{
-        transform: scale(1.1);
-       }
-       #c{
-        width: 200px;
-        height: 200px;
-        margin-left: 200px;
-        transition: transform 0.3s;
-       }
-       #c:hover{
-        transform: scale(1.1);
-       }
-       #java{
-        width: 250px;
-        height: 250px;
-        margin-left: 480px;
-        transition: transform 0.3s;
-       }
-       #java:hover{
+       #html:hover, #css:hover, #c:hover, #java:hover{
         transform: scale(1.1);
        }
        h2{
-        margin-left: 40px;
+        text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 35px;
+        font-size: 28px;
         color: teal;
        }
        h3{
         text-align: center;
-        font-size: 25px;
+        font-size: 22px;
        }
        #image{
+        width: 60vw;
+        max-width: 300px;
+        height: auto;
         border-radius: 10px;
-       }
+      }
        #name{
         fill: white;
-        font-size: 25px;
+        font-size: 18px;
         font-family: Georgia, 'Times New Roman', Times, serif;
        }
        .social-links a {
           color: #333;
-          font-size: 50px;
-          margin: 50px;
+          font-size: 30px;
+          margin: 20px;
           transition: color 0.3s, transform 0.3s;
         }
 
@@ -113,33 +88,48 @@
             color: #0077b5; 
             transform: scale(1.2);
         }
+
+       @media (max-width: 768px) {
+        #h1 {
+          font-size: 8vw;
+        }
+        #name {
+          font-size: 14px;
+        }
+        #para, #line1, #line2 {
+          font-size: 16px;
+        }
+        .svg {
+          border-radius: 0;
+        }
+      }
     </style>
     </head>
     <body>
-        <svg class="svg" width="1347" height="620">
-            
+        <svg class="svg" viewBox="0 0 1347 620" preserveAspectRatio="xMidYMid meet">
             <text id="h1" x="150" y="200">
                 <tspan x="150" dy="0">Welcome to</tspan>
                 <tspan x="150" dy="1.2em">My Coding</tspan>
                 <tspan x="150" dy="1.2em">Portfolio</tspan>
-        </text>
-        <image id="image" href="image1.jpeg" x="800" y="100" width="400" height="400"/>
-        <rect x="240" y="465" width="420" height="60" fill="none" stroke="white" stroke-width="2px" rx="30" ry="30" />
-        <text id="name" x="250" y="500">
-            M. Abdullah (Coder, Designer, Gamer)
-        </text>
-    </svg>
+            </text>
+            <image id="image" href="image1.jpeg" x="800" y="100" width="400" height="400"/>
+            <rect x="240" y="465" width="420" height="60" fill="none" stroke="white" stroke-width="2px" rx="30" ry="30" />
+            <text id="name" x="250" y="500">M. Abdullah (Coder, Designer, Gamer)</text>
+        </svg>
+
         <p id="line1"><b>Code. Design. Game On.</b></p>
-        <p id="para">Hi there! I’m a passionate coder, creative web designer, and<br>
+        <p id="para">
+            Hi there! I’m a passionate coder, creative web designer, and<br>
             avid gamer who loves turning ideas into interactive digital experiences.<br>
             By day, I craft clean, responsive websites and intuitive interfaces<br>
             using the latest web technologies; by night, I dive into code challenges<br>
             and gaming worlds to stay sharp and inspired. Whether I’m architecting a<br>
             seamless user journey or optimizing gameplay performance, my goal is the<br>
             same: deliver engaging, high-quality solutions that leave a lasting<br>
-            impression.</p>
+            impression.
+        </p>
         <p id="line2"><b>Let’s build something great together!</b></p>
-            <br>
+        <br>
         <section>
             <h2><b>My Tech Toolbox</b></h2>
             <h3><b>Front End</b></h3>
@@ -151,12 +141,12 @@
             <img id="java" src="java.png" alt="JAVA">
         </section>
         <section id="contact">
-  <h2>Contact Me</h2>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/mirza-abdullah-yaqoob-0073aa336/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/abdullahyaqoobm/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:abdullahyaqoobm@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
-</section>
+            <h2>Contact Me</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mirza-abdullah-yaqoob-0073aa336/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/abdullahyaqoobm/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:abdullahyaqoobm@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
     </body>
 </html>
